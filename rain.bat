@@ -1,4 +1,4 @@
-@echo off
+e@echo off
 setlocal EnableDelayedExpansion
 set "timeout=2"
 for /F "tokens=1,2 delims=#" %%a in ('"prompt #$H#$E# & echo on & for %%b in (1) do rem"') do (
@@ -6,9 +6,9 @@ for /F "tokens=1,2 delims=#" %%a in ('"prompt #$H#$E# & echo on & for %%b in (1)
 )
 :loop
 FOR %%G IN (9,a,b,c,d,e) DO (
-::[HELLO
-::[WORLD
-::]RED
+::[WELCOME 
+::[TO
+::]GITLAB
 cls
 for /f "delims=:[ tokens=*" %%A in ('findstr /b "::[" "%~f0"') do @call :ColorText 0%%G "%%A"
 for /f "delims=:] tokens=*" %%A in ('findstr /b "::]" "%~f0"') do @call :ColorText 0c "%%A"
